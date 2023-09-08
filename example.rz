@@ -1,0 +1,40 @@
+primitive class int sizeof 4 extends INTEGER 
+{
+    function unsafe inline operator bool EqualTo(bool a, bool b)
+    {
+        asm {
+            return CMP $a, $b;
+        }
+    }
+}
+primitive class bool sizeof 1 extends BOOLEAN {  }
+
+class A {
+    function A(){}
+
+    function static bool Foo(int i, bool b) {
+        if (b)
+        {
+            return Y(i);
+        }
+        return false;
+    }
+
+    function bool Y(int i){
+        return i == 35;
+    }
+}
+
+function int Main()
+{
+    A a = new A();
+
+    if (A.Foo(35, true)) 
+    {
+        return 5;
+    }
+    else
+    {
+        return 4;
+    }
+}
