@@ -1,0 +1,25 @@
+{
+  "name": "raze-language-support",
+  "displayName": "Raze Language Support",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "raze",
+      "aliases": ["Raze", "raze"],
+      "extensions": [".rz"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "raze",
+      "scopeName": "source.rz",
+      "path": "./syntaxes/raze.tmLanguage.json"
+    }]
+  }
+}
