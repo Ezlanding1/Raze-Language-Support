@@ -4,26 +4,58 @@
 	"scopeName": "source.rz",
 	"patterns": [
 		{
-			"include": "#statements"
-		},
-		{
-			"include": "#symbols"
+			"include": "#comments"
 		},
 		{
 			"include": "#constants"
 		},
 		{
-			"include": "#comments"
+			"include": "#symbols"
+		},
+		{
+			"include": "#statements"
 		}
 	],
 	"repository": {
 		"statements": {
 			"patterns": [
 				{
+					"include": "#expressions"
+				},
+				{
 					"include": "#definitions"
 				},
 				{
 					"include": "#declarations"
+				}
+			]
+		},
+		"expressions": {
+			"patterns": [
+				{
+					"match": "(new)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+					"captures": {
+						"1": {
+							"name": "keyword.new.raze"
+						},
+						"2": {
+							"name": "entity.name.type.raze"
+						}
+					}
+				},
+				{
+					"match": "([a-zA-Z_][a-zA-Z0-9_]*)\\s+(is)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+					"captures": {
+						"1": {
+							"name": "variable.name.raze"
+						},
+						"2": {
+							"name": "keyword.is.raze"
+						},
+						"3": {
+							"name": "entity.name.type.raze"
+						}
+					}
 				}
 			]
 		},
