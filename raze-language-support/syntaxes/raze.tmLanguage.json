@@ -26,6 +26,9 @@
 					"include": "#definitions"
 				},
 				{
+					"include": "#control-flow"
+				},
+				{
 					"include": "#declarations"
 				}
 			]
@@ -151,6 +154,22 @@
 					}
 				}
 				
+			]
+		},
+		"control-flow": {
+			"patterns": [
+				{
+					"name": "keyword.control.control-flow.conditional.raze",
+					"match": "(if|else)"
+				},
+				{
+					"name": "keyword.control.control-flow.loop.raze",
+					"match": "(while|for)"
+				},
+				{
+					"name": "keyword.control.control-flow.flow.raze",
+					"match": "return"
+				}
 			]
 		},
 
