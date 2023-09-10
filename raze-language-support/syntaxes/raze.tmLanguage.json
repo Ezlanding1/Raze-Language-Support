@@ -17,6 +17,35 @@
 		}
 	],
 	"repository": {
+		"statements": {
+			"patterns": [
+				{
+					"include": "#definitions"
+				}
+			]
+		},
+		"definitions": {
+			"patterns": [
+				{
+					"match": "(function)(\\s+((static|unsafe|operator|inline)\\s+)*)(([a-zA-Z_][a-zA-Z0-9_]*\\s+)?([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\(.*\\))?",
+					"captures": {
+						"1": {
+							"name": "storage.type.function.raze"
+						},
+						"2": {
+							"name": "storage.type.function-modifier.raze"
+						},
+						"6": {
+							"name": "entity.name.type"
+						},
+						"7": {
+							"name": "entity.name.function"
+						}
+					}
+					
+				}
+			]
+		},
 
 		"symbols": {
 			"patterns": [
@@ -58,6 +87,7 @@
 				
 			]
 		},
+
 		"constants": {
 			"patterns": [
 				{
@@ -104,6 +134,7 @@
 				}
 			]
 		},
+
 		"comments": {
 			"name": "comment.line.hash.raze",
 			"match": "#.*"

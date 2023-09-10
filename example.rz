@@ -12,15 +12,15 @@ primitive class string sizeof 8 extends STRING {  }
 
 class A {
     function A(){}
-
-    function static bool Foo(int i, bool b) {
+    
+    function inline static static bool Foo(int i, bool b) {
         if (b)
         {
             return Y(i);
         }
         return false;
     }
-
+    
     function bool Y(int i){
         return i == 35;
     }
