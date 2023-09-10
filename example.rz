@@ -8,6 +8,7 @@ primitive class int sizeof 4 extends INTEGER
     }
 }
 primitive class bool sizeof 1 extends BOOLEAN {  }
+primitive class string sizeof 8 extends STRING {  }
 
 class A {
     function A(){}
@@ -27,7 +28,9 @@ class A {
 
 function int Main()
 {
-    A a = new A();
+    # comment
+    A a = new A(); # comment
+    string s = "\n";
 
     if (A.Foo(35, true)) 
     {
@@ -37,4 +40,8 @@ function int Main()
     {
         return 4;
     }
+}
+
+function TESTtrueTEST(){
+    
 }
