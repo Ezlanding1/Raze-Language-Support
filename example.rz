@@ -30,6 +30,12 @@ function int Main()
 {
     # comment
     A a = new A(); # comment
+
+    +, -, /
+    --, ++
+    ^, & 
+    !=, ==, >, <=
+
     string s = "\n";
 
     if (A.Foo(35, true)) 
