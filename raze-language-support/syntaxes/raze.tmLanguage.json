@@ -26,7 +26,7 @@
 					"include": "#definitions"
 				},
 				{
-					"include": "#control-flow"
+					"include": "#blocks"
 				},
 				{
 					"include": "#declarations"
@@ -43,7 +43,7 @@
 					"match": "(new)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
 					"captures": {
 						"1": {
-							"name": "keyword.new.raze"
+							"name": "keyword.operator.new.raze"
 						},
 						"2": {
 							"name": "entity.name.type.raze"
@@ -154,6 +154,17 @@
 					}
 				}
 				
+			]
+		},
+		"blocks": {
+			"patterns": [
+				{
+					"include": "#control-flow"
+				},
+				{
+					"name": "keyword.control.block.asm.raze",
+					"match": "asm"
+				}
 			]
 		},
 		"control-flow": {
