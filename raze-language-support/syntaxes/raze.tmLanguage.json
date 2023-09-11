@@ -90,7 +90,7 @@
 					
 				},
 				{
-					"match": "(primitive\\s+class)(\\s+([a-zA-Z_][a-zA-Z0-9_]*)(\\s+(sizeof)(\\s+([0-9]+))?)?)?\\s+((extends)\\s+(([a-zA-Z_][a-zA-Z0-9_]*)?))?",
+					"match": "(primitive\\s+class)(\\s+([a-zA-Z_][a-zA-Z0-9_]*)(\\s+(sizeof)(\\s+([0-9]+))?)?)?(\\s+(extends)\\s+(([a-zA-Z_][a-zA-Z0-9_]*)?))?",
 					"captures": {
 						"1": {
 							"name": "storage.type.class.primitive.raze"
@@ -113,7 +113,7 @@
 					}
 				},
 				{
-					"match": "(class)(\\s+([a-zA-Z_][a-zA-Z0-9_]*))?\\s+((extends)\\s+(([a-zA-Z_][a-zA-Z0-9_]*)?))?",
+					"match": "(class)(\\s+([a-zA-Z_][a-zA-Z0-9_]*))?(\\s+(extends)\\s+(([a-zA-Z_][a-zA-Z0-9_]*)?))?",
 					"captures": {
 						"1": {
 							"name": "storage.type.class.raze"
