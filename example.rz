@@ -13,6 +13,14 @@ primitive class string sizeof 8 extends STRING {  }
 class A {
     function A(){}
     
+    class B {
+        function B(){}
+    }
+
+    function static bool Y(int i){
+        return i == 35;
+    }
+
     function inline static static bool Foo(int i, bool b) {
         if (b)
         {
@@ -20,16 +28,12 @@ class A {
         }
         return false;
     }
-    
-    function bool Y(int i){
-        return i == 35;
-    }
 }
 
 function int Main()
 {
     # comment
-    A a = new A(); # comment
+    A.B a = new A.B(); # comment
     a = new A();
     
     +, -, /
