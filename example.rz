@@ -21,7 +21,7 @@ class A {
         return i == 35;
     }
 
-    function inline static static bool Foo(int i, bool b) {
+    function inline static static bool Foo(ref int i, bool b) {
         if (b)
         {
             return Y(i);
@@ -43,7 +43,8 @@ function int Main()
     bool b = a is A;
     string s = "\n";
 
-    if (A.Foo(35, true)) 
+    int i = 35;
+    if (A.Foo(ref i, true)) 
     {
         return 5;
     }

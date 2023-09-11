@@ -137,18 +137,35 @@
 		"variables": {
 			"patterns": [
 				{
-					"match": "((([a-zA-Z_][a-zA-Z0-9_]*)\\.)*([a-zA-Z_][a-zA-Z0-9_]*)(\\s*\\$\\s*|\\s+)([a-zA-Z_][a-zA-Z0-9_]*))(?!\\()",
+					"match": "(ref)\\s+(\\$\\s*)?([a-zA-Z_][a-zA-Z0-9_]*)\\b(?!(\\s+[a-zA-Z_][a-zA-Z0-9_]*))",
 					"captures": {
+						"1": {
+							"name": "keyword.variable-modifier.raze"
+						},
+						"2": {
+							"name": "punctuation.definition.template-expression.begin.escape.raze"
+						},
 						"3": {
-							"name": "entity.name.type.raze"
+							"name": "variable.name.raze"
+						}
+					}
+				},
+				{
+					"match": "(ref\\s+)?((([a-zA-Z_][a-zA-Z0-9_]*)\\.)*([a-zA-Z_][a-zA-Z0-9_]*)(\\s*\\$\\s*|\\s+)([a-zA-Z_][a-zA-Z0-9_]*))(?!\\()",
+					"captures": {
+						"1": {
+							"name": "keyword.variable-modifier.raze"
 						},
 						"4": {
 							"name": "entity.name.type.raze"
 						},
 						"5": {
-							"name": "punctuation.definition.template-expression.begin.escape.raze"
+							"name": "entity.name.type.raze"
 						},
 						"6": {
+							"name": "punctuation.definition.template-expression.begin.escape.raze"
+						},
+						"7": {
 							"name": "variable.name.raze"
 						}
 						
@@ -165,7 +182,6 @@
 						}
 					}
 				}
-				
 			]
 		},
 		"blocks": {
