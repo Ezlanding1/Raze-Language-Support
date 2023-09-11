@@ -20,13 +20,13 @@
 		"statements": {
 			"patterns": [
 				{
-					"include": "#expressions"
+					"include": "#blocks"
 				},
 				{
 					"include": "#definitions"
 				},
 				{
-					"include": "#blocks"
+					"include": "#expressions"
 				},
 				{
 					"include": "#declarations"
