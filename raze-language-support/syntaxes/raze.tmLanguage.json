@@ -263,12 +263,20 @@
 					"match": "\\b(false)\\b"
 				},
 				{
-					"name": "constant.numeric.literal.integer.raze",
-					"match": "[0-9]+"
+					"name": "constant.numeric.literal.binary.raze",
+					"match": "[0-1]+b"
+				},
+				{
+					"name": "constant.numeric.literal.hex.raze",
+					"match": "0[xX][0-9a-fA-F]+"
 				},
 				{
 					"name": "constant.numeric.literal.floating.raze",
 					"match": "[0-9]+[.][0-9]+"
+				},
+				{
+					"name": "constant.numeric.literal.integer.raze",
+					"match": "[0-9]+"
 				},
 				{
 					"name": "string.quoted.double.raze",
