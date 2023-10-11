@@ -57,3 +57,5 @@ function int Main()
 function TESTtrueTEST(){
     
 }
+
+function A.B.CD Foo(){}
