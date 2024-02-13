@@ -73,22 +73,55 @@
 		"definitions": {
 			"patterns": [
 				{
-					"match": "(function)(\\s+((static|unsafe|operator|inline)\\s+)*)(((([a-zA-Z_][a-zA-Z0-9_]*)\\.?)*\\s+)?([a-zA-Z_][a-zA-Z0-9_]*)\\s*)?",
+					"begin": "import",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.control.import.raze"
+						}
+					},
+					"end": "((from)\\s+([a-zA-Z_][a-zA-Z_0-9]*))",
+					"endCaptures": {
+						"2": {
+							"name": "keyword.from.raze"
+						},
+						"3": {
+							"name": "entity.name.type.raze"
+						}
+					},
+					"patterns": [
+						{
+							"match": "[a-zA-Z_][a-zA-Z_0-9]*",
+							"name": "entity.name.type.raze"
+						}
+					]
+				},
+				{
+					"begin": "\\b(function)((\\s+(static|unsafe|operator|inline|dll|extern|ref)\\b)*)",
+					"beginCaptures": {
+						"1": { "name": "storage.type.function.raze" },
+						"2": { "name": "storage.type.function-modifier.raze" }
+					},
+					"end": "([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\(",
+					"endCaptures": {
+						"1": { "name": "entity.name.function.raze" }
+					},
+					"patterns": [
+						{
+							"match": "[a-zA-Z_][a-zA-Z0-9_]*",
+							"name": "entity.name.type.raze"
+						}
+					]
+				},
+				{
+					"match": "\\)\\s*(from)\\s*(\".*\")",
 					"captures": {
 						"1": {
-							"name": "storage.type.function.raze"
+							"name": "keyword.from.raze"
 						},
 						"2": {
-							"name": "storage.type.function-modifier.raze"
-						},
-						"6": {
-							"name": "entity.name.type.raze"
-						},
-						"9": {
-							"name": "entity.name.function.raze"
+							"name": "string.quoted.double.raze"
 						}
 					}
-					
 				},
 				{
 					"match": "(primitive\\s+class)(\\s+([a-zA-Z_][a-zA-Z0-9_]*)(\\s+(sizeof)(\\s+([0-9]+))?)?)?(\\s+(extends)\\s+(([a-zA-Z_][a-zA-Z0-9_]*)?))?",
