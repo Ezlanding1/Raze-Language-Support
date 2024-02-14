@@ -328,6 +328,17 @@
 							"match": "\\\\."
 						}
 					]
+				},
+				{
+					"name": "string.quoted.single.raze",
+					"begin": "'",
+					"end": "'",
+					"patterns": [
+						{
+							"name": "constant.character.escape.raze",
+							"match": "\\\\."
+						}
+					]
 				}
 			]
 		},
