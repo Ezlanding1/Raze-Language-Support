@@ -1,30 +1,35 @@
+import Foo.Bar from Package;
+
 primitive class int sizeof 4 extends INTEGER 
 {
     function unsafe inline operator bool EqualTo(bool a, bool b)
     {
-        asm {
-            return CMP $a, $b;
-        }
+        asm { return CMP $a, $b; }
     }
 }
-primitive class bool sizeof 1 extends BOOLEAN {  }
-primitive class string sizeof 8 extends STRING {  }
 
-class A {
-    function A(){}
+class Foo
+{
+    int i;
+    Bar bar;
+
+    function Foo(){}
     
-    class B {
-        function B(){}
+    class Bar
+    {
+        function Bar(){}
+        function A(){}
     }
 
-    function static bool Y(int i){
-        return i == 35;
+    function inline bool Baz(int i, int a)
+    {
+        return this.i == 35;
     }
 
-    function inline static static bool Foo(ref int i, bool b) {
-        if (b)
+    function bool Baz(ref int i, bool b) {
+        if (b == true)
         {
-            return Y(i);
+            return Baz(i++);
         }
         return false;
     }
@@ -32,19 +37,19 @@ class A {
 
 function int Main()
 {
-    # comment
-    A.B a = new A.B(); # comment
-    a = new A();
+    # Comment
+    int i = 34;
+    Foo.b.s foo = new Foo();
+    foo.bar = new Bar();
+    foo.bar.A();
     
-    +, -, /
-    --, ++
-    ^, & 
-    !=, ==, >, <=
-    bool b = a is A;
     string s = "\n";
+    char c = 33 as char;
+    char d = 'c';
 
-    int i = 35;
-    if (A.Foo(ref i, true)) 
+    i = 34;
+
+    if (foo.Baz(ref i, true)) 
     {
         return 5;
     }
@@ -54,8 +59,7 @@ function int Main()
     }
 }
 
-function TESTtrueTEST(){
-    
+function Foo.Bar Func(Foo.Bar a, ref Foo.Bar b)
+{
+    return new Foo.Bar();
 }
-
-function A.B.CD Foo(){}
