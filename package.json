@@ -1,7 +1,8 @@
 {
   "name": "raze-language-support",
-  "displayName": "Raze Language Support",
-  "description": "",
+  "displayName": "Raze Language Support (Syntax Highlighting)",
+  "publisher": "RazeLang",
+  "repository": { "url": "https://github.com/Ezlanding1/Raze-Language-Support" },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.82.0"
