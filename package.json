@@ -6,6 +6,7 @@
     "url": "https://github.com/Ezlanding1/Raze-Language-Support"
   },
   "version": "0.1.0",
+  "icon": "razeLogo.png",
   "engines": {
     "vscode": "^1.82.0"
   },

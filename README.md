@@ -6,7 +6,7 @@ This project contains a tmLanguage grammar which is used to provide syntax highl
 ## Samples
 
 ### Hello, World!
-![Hello World Sample](sample1.png)
+![Hello World Sample](https://raw.githubusercontent.com/Ezlanding1/Raze-Language-Support/refs/heads/main/sample1.png)
 
 ### Linked List
-![OOP Sample](sample2.png)
+![OOP Sample](https://raw.githubusercontent.com/Ezlanding1/Raze-Language-Support/refs/heads/main/sample2.png)
