@@ -2,8 +2,10 @@
   "name": "raze-language-support",
   "displayName": "Raze Language Support (Syntax Highlighting)",
   "publisher": "RazeLang",
-  "repository": { "url": "https://github.com/Ezlanding1/Raze-Language-Support" },
-  "version": "0.0.1",
+  "repository": {
+    "url": "https://github.com/Ezlanding1/Raze-Language-Support"
+  },
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.82.0"
   },
@@ -11,16 +13,25 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "raze",
-      "aliases": ["Raze", "raze"],
-      "extensions": [".rz"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "raze",
-      "scopeName": "source.rz",
-      "path": "./syntaxes/raze.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "raze",
+        "aliases": [
+          "Raze",
+          "raze"
+        ],
+        "extensions": [
+          ".rz"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "raze",
+        "scopeName": "source.rz",
+        "path": "./syntaxes/raze.tmLanguage.json"
+      }
+    ]
   }
 }
