@@ -60,7 +60,7 @@
 							"name": "keyword.isas.raze"
 						}
 					},
-					"end": "(?![a-zA-Z0-9_]|.)",
+					"end": "(?![a-zA-Z0-9_]|\\.)",
 					"patterns": [
 						{
 							"match": "[a-zA-Z_][a-zA-Z0-9_]*",
@@ -79,7 +79,7 @@
 							"name": "keyword.control.import.raze"
 						}
 					},
-					"end": "((from)\\s+([a-zA-Z_][a-zA-Z_0-9]*))",
+					"end": "((from)\\s+([a-zA-Z_][a-zA-Z_0-9]*))|;|$",
 					"endCaptures": {
 						"2": {
 							"name": "keyword.from.raze"
@@ -147,7 +147,7 @@
 					}
 				},
 				{
-					"match": "(class)(\\s+([a-zA-Z_][a-zA-Z0-9_]*))?(\\s+(extends)\\s+(([a-zA-Z_][a-zA-Z0-9_]*)?))?",
+					"match": "(class|trait)(\\s+([a-zA-Z_][a-zA-Z0-9_]*))?(\\s+(extends)\\s+(([a-zA-Z_][a-zA-Z0-9_]*)?))?",
 					"captures": {
 						"1": {
 							"name": "storage.type.class.raze"
@@ -182,7 +182,7 @@
 					}
 				},
 				{
-					"match": "((ref)|([a-zA-Z_][a-zA-Z0-9_]*))\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+					"match": "((ref\\s*)?([a-zA-Z_][a-zA-Z0-9_]*))\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
 					"captures": {
 						"2": {
 							"name": "keyword.ref.raze"
