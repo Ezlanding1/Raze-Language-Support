@@ -49,6 +49,8 @@ function int Main()
 
     i = 34;
 
+    readonly bool b = true;
+
     if (foo.Baz(ref i, true)) 
     {
         return 5;
